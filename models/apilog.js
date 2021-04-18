@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class movie extends Model {
+  class apilog extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  movie.init({
+  apilog.init({
     params: DataTypes.STRING,
     endpoint: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'movie',
+    modelName: 'apilog',
   });
-  return movie;
+  return apilog;
 };
